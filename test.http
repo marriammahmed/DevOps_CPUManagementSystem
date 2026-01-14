@@ -1,0 +1,41 @@
+### Get all CPUs
+GET http://localhost:8080/api/cpus
+
+### Get all Sockets
+GET http://localhost:8080/api/sockets
+
+### Create a Socket
+POST http://localhost:8080/api/sockets
+Content-Type: application/json
+
+{
+  "name": "LGA1151"
+}
+
+### Create another Socket
+POST http://localhost:8080/api/sockets
+Content-Type: application/json
+
+{
+  "name": "AM4"
+}
+
+### Create CPU 1
+POST http://localhost:8080/api/cpus
+Content-Type: application/json
+
+{
+  "brand": "Intel",
+  "model": "i9-13900K",
+  "socket": {"id": 1}
+}
+
+### Create CPU 2
+POST http://localhost:8080/api/cpus
+Content-Type: application/json
+
+{
+  "brand": "AMD",
+  "model": "Ryzen 9 7950X",
+  "socket": {"id": 2}
+}
